@@ -1,0 +1,62 @@
+GET http://localhost:3001/api/courses
+
+###
+GET http://localhost:3001/api/courses/notchosen
+
+###
+GET http://localhost:3001/api/studyplan
+
+###
+POST http://localhost:3001/api/studyplan
+Content-Type: application/json
+
+{   
+    "course": "02GOLOV"
+}
+
+###
+POST http://localhost:3001/api/studyplan
+Content-Type: application/json
+
+{   
+    "course": "01TXYOV"
+}
+
+###
+DELETE http://localhost:3001/api/studyplan/02LSEOV
+
+
+###
+DELETE http://localhost:3001/api/studyplan
+
+
+###
+POST http://localhost:3001/api/createstudyplan
+Content-Type: application/json
+
+{   
+    "full": 0
+}
+
+####
+
+PUT http://localhost:3001/api/studyplan
+Content-Type: application/json 
+
+{   "full": 0,
+    "courses": ["01UDFOV", "03UEWOV","01UDFOV","02GOLOV","02LSEOV"]
+}
+
+####
+POST http://localhost:3001/api/sessions
+
+Content-Type: application/json 
+
+{   
+    "credentials" : "include",
+    "username": "jacopo@studenti.polito.it",
+    "password": "jacopo"
+}
+
+####
+DELETE http://localhost:3001/api/sessions
